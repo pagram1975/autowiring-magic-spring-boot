@@ -1,0 +1,1 @@
+# autowiring-magic-spring-boot
