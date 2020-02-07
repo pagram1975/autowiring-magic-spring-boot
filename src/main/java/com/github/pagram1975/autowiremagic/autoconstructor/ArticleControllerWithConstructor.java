@@ -16,6 +16,7 @@ public class ArticleControllerWithConstructor {
     /* Note - No autowired annotation needed. */
     private ArticleService articleService;
 
+    /* This is the only constructor available to Spring Boot, so this is the one Spring Boot will use. */
     public ArticleControllerWithConstructor (ArticleService articleService) {
         this.articleService = articleService;
     }

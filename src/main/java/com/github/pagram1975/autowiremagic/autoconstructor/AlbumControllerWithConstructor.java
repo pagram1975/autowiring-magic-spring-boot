@@ -15,6 +15,7 @@ public class AlbumControllerWithConstructor {
     /* Note - No autowired annotation needed. */
     private AlbumService articleService;
 
+    /* This is the only constructor available to Spring Boot, so this is the one Spring Boot will use. */
     public AlbumControllerWithConstructor (AlbumService articleService) {
         this.articleService = articleService;
     }
