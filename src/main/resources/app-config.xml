@@ -5,6 +5,7 @@
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean name="autowire.ArtistService" class="com.github.pagram1975.autowiremagic.ArtistService"/>
     <bean name="autowire.AlbumService" class="com.github.pagram1975.autowiremagic.AlbumService"/>
     <bean name="autowire.ArticleService" class="com.github.pagram1975.autowiremagic.ArticleService"/>
 

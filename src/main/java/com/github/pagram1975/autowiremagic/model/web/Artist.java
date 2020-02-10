@@ -1,4 +1,4 @@
-package com.github.pagram1975.autowiremagic;
+package com.github.pagram1975.autowiremagic.model.web;
 
 public class Artist {
     private String firstname;

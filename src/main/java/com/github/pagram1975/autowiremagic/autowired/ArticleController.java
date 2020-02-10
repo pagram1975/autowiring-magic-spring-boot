@@ -1,7 +1,7 @@
 package com.github.pagram1975.autowiremagic.autowired;
 import java.util.List;
 
-import com.github.pagram1975.autowiremagic.Article;
+import com.github.pagram1975.autowiremagic.model.web.Article;
 import com.github.pagram1975.autowiremagic.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

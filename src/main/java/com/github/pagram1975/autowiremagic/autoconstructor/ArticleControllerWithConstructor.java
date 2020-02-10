@@ -1,8 +1,7 @@
 package com.github.pagram1975.autowiremagic.autoconstructor;
 
-import com.github.pagram1975.autowiremagic.Article;
+import com.github.pagram1975.autowiremagic.model.web.Article;
 import com.github.pagram1975.autowiremagic.ArticleService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
