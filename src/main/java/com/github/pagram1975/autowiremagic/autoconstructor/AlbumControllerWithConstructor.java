@@ -13,16 +13,16 @@ import java.util.List;
 public class AlbumControllerWithConstructor {
 
     /* Note - No autowired annotation needed. */
-    private AlbumService articleService;
+    private AlbumService albumService;
 
     /* This is the only constructor available to Spring Boot, so this is the one Spring Boot will use. */
-    public AlbumControllerWithConstructor (AlbumService articleService) {
-        this.articleService = articleService;
+    public AlbumControllerWithConstructor (AlbumService albumService) {
+        this.albumService = albumService;
     }
 
     @GetMapping("/")
     public List<Album> getAllAlbums() {
-        List<Album> list = articleService.getAllAlbums();
+        List<Album> list = albumService.getAllAlbums();
         return list;
     }
 }

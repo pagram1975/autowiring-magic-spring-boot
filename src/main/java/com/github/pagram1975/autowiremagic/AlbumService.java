@@ -1,8 +1,6 @@
 package com.github.pagram1975.autowiremagic;
 
 import com.github.pagram1975.autowiremagic.model.web.Album;
-import com.github.pagram1975.autowiremagic.model.web.Artist;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;

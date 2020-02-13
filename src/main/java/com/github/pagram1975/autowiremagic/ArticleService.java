@@ -1,5 +1,4 @@
 package com.github.pagram1975.autowiremagic;
-import com.github.pagram1975.autowiremagic.model.web.Album;
 import com.github.pagram1975.autowiremagic.model.web.Article;
 
 import java.util.ArrayList;
@@ -10,9 +9,9 @@ public class ArticleService {
     List<Article> list = new ArrayList<>();
 
     public ArticleService () {
-        list.add(new Article(1, "Java Concurrency", "Java"));
-        list.add(new Article(2, "Hibernate HQL", "Hibernate"));
-        list.add(new Article(3, "Spring MVC with Hibernate", "Spring"));
+        list.add(new Article(1, "Technical agility vs. business agility", "Delivery"));
+        list.add(new Article(2, "Continuous Testing – Creating a testable CI/CD pipeline.", "Testing"));
+        list.add(new Article(3, "Embrace your Obsessions!", "Tech"));
     }
 
     public List<Article> getAllArticles() {
