@@ -1,9 +1,14 @@
 package com.github.pagram1975.autowiremagic.model.web;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.github.pagram1975.autowiremagic.model.internal.Author;
+import com.github.pagram1975.autowiremagic.model.internal.Category;
+
 public class Article {
     private int articleId;
     private String title;
     private String category;
+    private Author author;
     public Article(int articleId, String title, String category) {
         this.articleId = articleId;
         this.title = title;
