@@ -3,10 +3,10 @@ package com.github.pagram1975.autowiremagic.model.web;
 public class Album {
     private int albumId;
     private String title;
-    private String genre;
+    private Genre genre;
     private Artist artist;
-    public Album(int articleId, String title, String genre, Artist artist) {
-        this.albumId = articleId;
+    public Album(int albumId, String title, Genre genre, Artist artist) {
+        this.albumId = albumId;
         this.title = title;
         this.genre = genre;
         this.artist = artist;
@@ -18,7 +18,7 @@ public class Album {
         return title;
     }
     public String getGenre() {
-        return genre;
+        return genre.toExternalForm();
     }
     public Artist getArtist() {
         return artist;

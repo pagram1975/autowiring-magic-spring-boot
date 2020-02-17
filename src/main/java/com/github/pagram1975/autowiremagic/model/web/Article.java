@@ -1,18 +1,15 @@
 package com.github.pagram1975.autowiremagic.model.web;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.github.pagram1975.autowiremagic.model.internal.Author;
-import com.github.pagram1975.autowiremagic.model.internal.Category;
-
 public class Article {
     private int articleId;
     private String title;
     private String category;
-    private Author author;
-    public Article(int articleId, String title, String category) {
+    private String authorName;
+    public Article(int articleId, String title, String category, String authorName) {
         this.articleId = articleId;
         this.title = title;
         this.category = category;
+        this.authorName = authorName;
     }
     public int getArticleId() {
         return articleId;
@@ -22,5 +19,8 @@ public class Article {
     }
     public String getCategory() {
         return category;
+    }
+    public String getAuthorName() {
+        return authorName;
     }
 }

@@ -4,11 +4,12 @@ public class Article {
     private int articleId;
     private String title;
     private Category category;
-    private Author author;
-    public Article(int articleId, String title, Category category) {
+    private int authorId;
+    public Article(int articleId, String title, Category category, int authorId) {
         this.articleId = articleId;
         this.title = title;
         this.category = category;
+        this.authorId = authorId;
     }
     public int getArticleId() {
         return articleId;
@@ -18,5 +19,8 @@ public class Article {
     }
     public Category getCategory() {
         return category;
+    }
+    public int getAuthorId() {
+        return authorId;
     }
 }

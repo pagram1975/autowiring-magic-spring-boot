@@ -1,6 +1,6 @@
 package com.github.pagram1975.autowiremagic;
 
-import com.github.pagram1975.autowiremagic.model.internal.Author;
+import com.github.pagram1975.autowiremagic.model.web.Author;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -29,4 +29,11 @@ public class AuthorService {
         return map.values();
     }
 
+    public Author getAuthorForAuthorId(int authorId) {
+        Author result = map.get(authorId);
+        if (result == null) {
+            return Author.UNKNOWN_AUTHOR;
+        }
+        return result;
+    }
 }
