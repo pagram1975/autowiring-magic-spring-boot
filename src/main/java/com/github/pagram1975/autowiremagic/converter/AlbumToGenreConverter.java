@@ -8,14 +8,15 @@ public class AlbumToGenreConverter implements Converter<Album, Genre> {
 
     @Override
     public Genre convert(Album album) {
-        if (album.getTitle().equals("Worry")) {
-            return Genre.PUNK_POP;
-        } else if (album.getTitle().equals("Black Terry Cat")) {
-            return Genre.RNB;
-        } else if (album.getTitle().equals("Philharmonics")) {
-            return Genre.FOLK;
-        } else {
-            return Genre.POP;
+        switch (album.getTitle()) {
+            case "Worry":
+                return Genre.PUNK_POP;
+            case "Black Terry Cat":
+                return Genre.RNB;
+            case "Philharmonics":
+                return Genre.FOLK;
+            default:
+                return Genre.POP;
         }
     }
 }

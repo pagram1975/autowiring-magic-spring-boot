@@ -1,6 +1,5 @@
 package com.github.pagram1975.autowiremagic.autoconstructor;
 
-import com.github.pagram1975.autowiremagic.AlbumService;
 import com.github.pagram1975.autowiremagic.AuthorService;
 import com.github.pagram1975.autowiremagic.model.web.Author;
 import org.springframework.web.bind.annotation.GetMapping;
