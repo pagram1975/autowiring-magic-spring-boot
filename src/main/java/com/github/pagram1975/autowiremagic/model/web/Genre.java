@@ -1,6 +1,7 @@
 package com.github.pagram1975.autowiremagic.model.web;
 
 public enum Genre {
+    UNKNOWN,
     RNB{
         String externalName = new String ("R&B");
 

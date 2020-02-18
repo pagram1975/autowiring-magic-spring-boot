@@ -17,6 +17,9 @@ public class Album {
     public String getTitle() {
         return title;
     }
+    public void setGenre(Genre genre) {
+        this.genre = genre;
+    }
     public String getGenre() {
         return genre.toExternalForm();
     }

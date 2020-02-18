@@ -8,11 +8,15 @@
     <bean name="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
         <property name="converters">
             <set>
-                <bean class="com.github.pagram1975.autowiremagic.converter.AlbumIdToGenreConverter"/>
+                <bean class="com.github.pagram1975.autowiremagic.converter.AlbumToGenreConverter"/>
+                <!-- The InternalArticleToWebArticleConverter needs an AuthorService, which is
+                 a parameter on its constructor. Here we're not telling Spring about the AuthorService. -->
                 <bean class="com.github.pagram1975.autowiremagic.converter.InternalArticleToWebArticleConverter"/>
             </set>
         </property>
     </bean>
+    <!-- The AlbumService construtor has two parameters, here we're only giving Spring the details of one
+     of them and not providing the conversionService. -->
     <bean name="autowire.AlbumService" class="com.github.pagram1975.autowiremagic.AlbumService">
         <constructor-arg ref="autowire.ArtistService"/>
     </bean>

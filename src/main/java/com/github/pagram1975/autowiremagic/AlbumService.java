@@ -18,9 +18,18 @@ public class AlbumService {
     public AlbumService (ArtistService artistService, ConversionService conversionService) {
         this.artistService = artistService;
         this.conversionService = conversionService;
-        list.add(new Album(1, "Worry", conversionService.convert(1, Genre.class), artistService.getAllArtists().get(0)));
-        list.add(new Album(2, "Black Terry Cat", conversionService.convert(2, Genre.class), artistService.getAllArtists().get(1)));
-        list.add(new Album(3, "Philharmonics", conversionService.convert(3, Genre.class), artistService.getAllArtists().get(2)));
+        /* Create some albums, we don't know the genre at this point. */
+        Album worry = new Album(1, "Worry", Genre.UNKNOWN, artistService.getAllArtists().get(0));
+        Album blackTerryCat = new Album(2, "Black Terry Cat", Genre.UNKNOWN, artistService.getAllArtists().get(1));
+        Album philharmonics = new Album(3, "Philharmonics", Genre.UNKNOWN, artistService.getAllArtists().get(2));
+        /* Use another service to determine the album genre. */
+        worry.setGenre(conversionService.convert(worry, Genre.class));
+        blackTerryCat.setGenre(conversionService.convert(blackTerryCat, Genre.class));
+        philharmonics.setGenre(conversionService.convert(philharmonics, Genre.class));
+        /* Compile the list of albums to give to our controllers. */
+        list.add(worry);
+        list.add(blackTerryCat);
+        list.add(philharmonics);
     }
 
     public List<Album> getAllAlbums() {
