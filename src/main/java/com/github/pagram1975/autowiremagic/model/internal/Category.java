@@ -5,7 +5,7 @@ public enum Category {
     CLOUD,
     TECH,
     UX_DESIGN {
-        String externalName = new String ("UX Design");
+        String externalName = "UX Design";
 
         public String toExternalForm() {
             return externalName;
@@ -14,7 +14,7 @@ public enum Category {
     DELIVERY,
     TESTING,
     DATA_ENGINEERING {
-        String externalName = new String ("Data Engineering");
+        String externalName = "Data Engineering";
 
         public String toExternalForm() {
             return externalName;

@@ -3,7 +3,7 @@ package com.github.pagram1975.autowiremagic.model.web;
 public enum Genre {
     UNKNOWN,
     RNB{
-        String externalName = new String ("R&B");
+        String externalName = "R&B";
 
         public String toExternalForm() {
             return externalName;
@@ -12,7 +12,7 @@ public enum Genre {
     FOLK,
     POP,
     PUNK_POP {
-        String externalName = new String ("Punk Pop");
+        String externalName = "Punk Pop";
 
         public String toExternalForm() {
             return externalName;

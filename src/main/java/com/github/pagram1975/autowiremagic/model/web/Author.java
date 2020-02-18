@@ -9,6 +9,6 @@ public class Author extends Person {
     }
     @Override
     public String toString() {
-        return new String(getFirstname() + " " + getLastname());
+        return getFirstname() + " " + getLastname();
     }
 }
