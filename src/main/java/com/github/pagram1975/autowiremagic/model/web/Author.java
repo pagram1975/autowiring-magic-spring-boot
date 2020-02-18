@@ -7,6 +7,9 @@ public class Author extends Person {
     public Author(int authorId, String firstname, String lastname) {
         super(authorId, firstname, lastname);
     }
+    public int getAuthorId() {
+        return super.getPersonId();
+    }
     @Override
     public String toString() {
         return getFirstname() + " " + getLastname();

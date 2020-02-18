@@ -1,5 +1,7 @@
 package com.github.pagram1975.autowiremagic.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class Person {
     private int personId;
     private String firstname;
@@ -9,6 +11,7 @@ public class Person {
         this.firstname = firstname;
         this.lastname = lastname;
     }
+    @JsonIgnore
     public int getPersonId () {
         return personId;
     }
@@ -18,5 +21,4 @@ public class Person {
     public String getLastname() {
         return lastname;
     }
-
 }
