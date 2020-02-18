@@ -21,7 +21,7 @@ public class AuthorService {
         list.add(new Author(6, "James", "Grant"));
 
         for(Author author : list) {
-            map.put(author.getPersonId(), author);
+            map.put(author.getAuthorId(), author);
         }
     }
 
