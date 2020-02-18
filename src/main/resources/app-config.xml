@@ -22,5 +22,7 @@
     </bean>
     <bean name="autowire.ArticleService" class="com.github.pagram1975.autowiremagic.ArticleService"/>
     <bean name="autowire.ArtistService" class="com.github.pagram1975.autowiremagic.ArtistService"/>
+    <!-- Comment out the bean definition below if you annotate the AuthorService class with @Service.
+     Duplicate the bean definition below (with a different name) to see ambiguity cause an error. -->
     <bean name="autowire.AuthorService" class="com.github.pagram1975.autowiremagic.AuthorService"/>
 </beans>
