@@ -18,7 +18,8 @@ public class AuthorControllerWithConstructor {
     /* Note - No autowired annotation needed. */
     private AuthorService authorService;
 
-    /* This is the only constructor available to Spring Boot, so this is the one Spring Boot will use. */
+    /* This is the only constructor available to Spring Boot,
+     * so this is the one Spring Boot will use. */
     public AuthorControllerWithConstructor(AuthorService authorService) {
         this.authorService = authorService;
     }
@@ -31,9 +32,6 @@ public class AuthorControllerWithConstructor {
 
     @GetMapping("/{id}")
     public Author getAuthorById(@PathVariable int id) {
-        return authorService.getAllAuthors().stream()
-                .filter(author -> author.getPersonId() == id)
-                .findFirst()
-                .orElseThrow(IllegalArgumentException::new);
+        return authorService.getAuthorForAuthorId(id);
     }
 }

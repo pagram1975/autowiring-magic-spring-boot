@@ -27,9 +27,6 @@ public class AuthorController {
 
     @GetMapping("/{id}")
     public Author getAuthorById(@PathVariable int id) {
-        return authorService.getAllAuthors().stream()
-                .filter(author -> author.getPersonId() == id)
-                .findFirst()
-                .orElseThrow(IllegalArgumentException::new);
+        return authorService.getAuthorForAuthorId(id);
     }
 }

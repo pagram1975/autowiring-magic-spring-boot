@@ -2,27 +2,26 @@ package com.github.pagram1975.autowiremagic;
 
 import com.github.pagram1975.autowiremagic.model.web.Author;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class AuthorService {
 
-    HashMap<Integer, Author> map = new HashMap<> ();
+    private Map<Integer, Author> map = new HashMap<> ();
 
     public AuthorService () {
-        List<Author> list = new ArrayList<>();
-        list.add(new Author(1, "Zinat", "Wali"));
-        list.add(new Author(2, "Jean-Sacha", "Melon"));
-        list.add(new Author(3, "Steven", "Waterman"));
-        list.add(new Author(4, "Sam", "Hogarth"));
-        list.add(new Author(5, "Callum", "Akehurst-Ryan"));
-        list.add(new Author(6, "James", "Grant"));
+        Author zinat = new Author(1, "Zinat", "Wali");
+        Author jeanSacha = new Author(2, "Jean-Sacha", "Melon");
+        Author steven = new Author(3, "Steven", "Waterman") ;
+        Author sam = new Author(4, "Sam", "Hogarth");
+        Author callum = new Author(5, "Callum", "Akehurst-Ryan");
+        Author james = new Author(6, "James", "Grant");
 
-        for(Author author : list) {
-            map.put(author.getAuthorId(), author);
-        }
+        map.put(zinat.getAuthorId(), zinat);
+        map.put(jeanSacha.getAuthorId(), jeanSacha);
+        map.put(steven.getAuthorId(), steven);
+        map.put(sam.getAuthorId(), sam);
+        map.put(callum.getAuthorId(), callum);
+        map.put(james.getAuthorId(), james);
     }
 
     public Collection<Author> getAllAuthors() {
