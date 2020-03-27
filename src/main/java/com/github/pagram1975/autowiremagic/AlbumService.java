@@ -18,7 +18,8 @@ public class AlbumService {
     public AlbumService (ArtistService artistService, ConversionService conversionService) {
         this.artistService = artistService;
         this.conversionService = conversionService;
-        /* Create some albums, we don't know the genre at this point. */
+        /* Create some albums, use the artistService to look up the
+         * artist. We don't know the genre at this point. */
         Album worry = new Album(1, "Worry", Genre.UNKNOWN, artistService.getAllArtists().get(0));
         Album blackTerryCat = new Album(2, "Black Terry Cat", Genre.UNKNOWN, artistService.getAllArtists().get(1));
         Album philharmonics = new Album(3, "Philharmonics", Genre.UNKNOWN, artistService.getAllArtists().get(2));
