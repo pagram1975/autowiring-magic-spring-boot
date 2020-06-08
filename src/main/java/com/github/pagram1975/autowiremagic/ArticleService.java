@@ -1,10 +1,12 @@
 package com.github.pagram1975.autowiremagic;
 import com.github.pagram1975.autowiremagic.model.internal.Article;
 import com.github.pagram1975.autowiremagic.model.internal.Category;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class ArticleService {
 
     List<Article> list = new ArrayList<>();

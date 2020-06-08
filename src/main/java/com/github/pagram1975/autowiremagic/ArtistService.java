@@ -1,10 +1,12 @@
 package com.github.pagram1975.autowiremagic;
 
 import com.github.pagram1975.autowiremagic.model.web.Artist;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class ArtistService {
 
     List<Artist> list = new ArrayList<>();

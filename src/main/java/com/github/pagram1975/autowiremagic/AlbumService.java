@@ -2,22 +2,30 @@ package com.github.pagram1975.autowiremagic;
 
 import com.github.pagram1975.autowiremagic.model.web.Album;
 import com.github.pagram1975.autowiremagic.model.web.Genre;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
+import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class AlbumService {
 
+    @Autowired
     ArtistService artistService;
 
+    @Autowired
     ConversionService conversionService;
 
     List<Album> list = new ArrayList<>();
 
-    public AlbumService (ArtistService artistService, ConversionService conversionService) {
-        this.artistService = artistService;
-        this.conversionService = conversionService;
+    /**
+     * The @PostConstruct annotation
+     */
+    @PostConstruct
+    public void initialiseService () {
         /* Create some albums, use the artistService to look up the
          * artist. We don't know the genre at this point. */
         Album worry = new Album(1, "Worry", Genre.UNKNOWN, artistService.getAllArtists().get(0));

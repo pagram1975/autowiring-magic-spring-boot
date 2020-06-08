@@ -1,9 +1,11 @@
 package com.github.pagram1975.autowiremagic;
 
 import com.github.pagram1975.autowiremagic.model.web.Author;
+import org.springframework.stereotype.Service;
 
 import java.util.*;
 
+@Service
 public class AuthorService {
 
     private Map<Integer, Author> map = new HashMap<> ();

@@ -20,7 +20,7 @@ public class AuthorControllerWithConstructor {
 
     /* This is the only constructor available to Spring Boot,
      * so this is the one Spring Boot will use. */
-    public AuthorControllerWithConstructor(AuthorService authorService) {
+    public AuthorControllerWithConstructor (AuthorService authorService) {
         this.authorService = authorService;
     }
 
